@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="rwc">
+	<head>
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.5/angular-filter.min.js"></script>
+		<script src="app.js"></script>
+
+	</head>
+	<body>
+
+		<ul class="nav nav-tabs nav-justified" ng-controller="TabController">
+			<li ng-class="tabClass(tab)" ng-repeat="tab in tabs">
+				<a href="{{tab.url}}" ng-click="setTab(tab)">{{tab.label}}</a>
+			</li>
+		</ul>
+		<div ng-view></div>
+
+	</body>
+</html>

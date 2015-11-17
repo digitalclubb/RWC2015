@@ -1,0 +1,8 @@
+<h3>Fixtures</h3>
+<section ng-repeat="(key, value) in matches | groupBy: 'time.millis' : true">
+	<h4>{{ key | date:'EEE MMM d yyyy' }}</h4>
+	<article ng-repeat="match in value">
+		<h4>{{match.teams[0].name}} <span>v</span> {{match.teams[1].name}}</h4>
+		<p>{{match.venue.name}}, {{match.venue.city}}, Kick off: {{match.time.millis | date:'HH:mm'}}</p>
+	</article>
+</section>

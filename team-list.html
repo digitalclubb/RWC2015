@@ -1,0 +1,4 @@
+<h3>All Teams</h3>
+<ul class="list-group">
+	<li class="list-group-item" ng-repeat="team in teams | orderBy:'name'"><a href="#/team/{{team.id}}">{{ team.name }}</a></li>
+</ul>

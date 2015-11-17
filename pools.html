@@ -1,0 +1,7 @@
+<h3>Pools</h3>
+<section ng-repeat="(key, value) in matches | groupBy: 'eventPhase'">
+	<h4>{{key}}</h4>
+	<article ng-repeat="match in value">
+		<h5>{{match.teams[0].name}} <span>v</span> {{match.teams[1].name}}</h5>
+	</article>
+</section>

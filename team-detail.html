@@ -1,0 +1,13 @@
+<h3>{{ team }}</h3>
+<ul class="list-group">
+	<li class="list-group-item" ng-repeat="player in players | orderBy:'player.name.last.official'">
+
+	<article>
+		<img src="http://irb-static-files.s3.amazonaws.com/rwc2015/person-images-site/140/{{ player.player.id }}.png" />
+		<h4>{{ player.player.name.display }}</h4>
+		<p>{{ player.positionLabel }}</p>
+		<p>Caps: {{ player.history.matches }}</p>
+	</article>
+	
+	</li>
+</ul>
